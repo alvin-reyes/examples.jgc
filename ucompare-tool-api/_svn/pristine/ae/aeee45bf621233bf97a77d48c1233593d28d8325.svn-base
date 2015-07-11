@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/context classpath:spring-context-4.1.xsd
+		http://www.springframework.org/schema/tx classpath:spring-tx-4.1.xsd">
+
+	<import resource="/hibernate/hibernateContext.xml" />
+	<import resource="/com/macq/ci/tools/dao/daoContext.xml" />
+	<import resource="/com/macq/ci/tools/service/serviceContext.xml" />
+	<context:component-scan base-package="com.macq.ci.tools.*"></context:component-scan>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+</beans>

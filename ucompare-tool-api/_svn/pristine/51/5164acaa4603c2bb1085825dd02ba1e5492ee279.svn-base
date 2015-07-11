@@ -1,0 +1,11 @@
+# jdbc.X
+jdbc.driverClassName=net.sourceforge.jtds.jdbc.Driver
+jdbc.url=jdbc:jtds:sybase://bfssyddev47:20020/sd_wrap
+jdbc.user=sduser
+jdbc.pass=nicegirl
+ 
+# hibernate.X
+hibernate.dialect=org.hibernate.dialect.SybaseDialect
+hibernate.show_sql=true
+hibernate.hbm2ddl.auto=create-drop
+#hibernate.hbm2ddl.auto=validate

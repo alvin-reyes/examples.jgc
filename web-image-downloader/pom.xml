@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.sapps.areyes1.techexam</groupId>
+	<artifactId>web-image-downloader</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Web Image Downloader</name>
+	<description>This is an tool that can be used to download images given a website.</description>
+
+	<!-- Use JSOUP to parse html -->
+	<dependencies>
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+
+	</dependencies>
+</project>
