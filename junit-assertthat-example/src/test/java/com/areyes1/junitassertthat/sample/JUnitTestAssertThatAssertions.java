@@ -2,7 +2,7 @@ package com.areyes1.junitassertthat.sample;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
-
+import static org.hamcrest.BaseMatcher.*;
 import java.util.ArrayList;
 import java.util.List;
 
