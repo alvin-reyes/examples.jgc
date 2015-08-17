@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/my_xml_schema"
+	xmlns:tns="http://www.example.org/my_xml_schema" elementFormDefault="qualified">
+	
+	<element name="PhoneBanking" type="tns:PhoneBankingType"></element>
+	<element name="comment" type="string"></element>
+		
+
+	<complexType name="PhoneBankingType">
+		<sequence>
+			<element name="shipTo" type="tns:Address"></element>
+			<element name="billTo" type="tns:Address"></element>
+			<element name="items" type="tns:items"></element>
+			<element name="orderDate" type="date"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="Address">
+		<sequence>
+			<element name="streetname" type="string"></element>
+			<element name="streetnumber" type="int"></element>
+			<element name="city" type="string"></element>
+			<element name="zip" type="tns:listOfMyIntType"></element>
+			<element name="country">
+				<simpleType>
+						<restriction base="string">
+							<enumeration value="US"></enumeration>
+							<enumeration value="Korea"></enumeration>
+							<enumeration value="Egypt"></enumeration>
+						</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="items">
+		<sequence>
+			<element name="name" type="string"></element>
+			<element name="quantity" type="string"></element>
+			<element name="price" type="int"></element>
+			<element name="availability">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="Yes"></enumeration>
+						<enumeration value="No"></enumeration>
+					</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+	</complexType>
+	
+	<simpleType name="listOfMyIntType">
+		<restriction base="integer">
+			<totalDigits value="5"></totalDigits>
+		</restriction>
+	</simpleType>
+	
+</schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:PhoneBanking xmlns:tns="http://www.example.org/my_xml_schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/my_xml_schema my_xml_schema.xsd ">
+  <tns:shipTo>
+    <tns:streetname>tns:streetname</tns:streetname>
+    <tns:streetnumber>0</tns:streetnumber>
+    <tns:city>tns:city</tns:city>
+    <tns:zip>12345</tns:zip>
+    <tns:country>US</tns:country>
+  </tns:shipTo>
+  <tns:billTo>
+    <tns:streetname>tns:streetname</tns:streetname>
+    <tns:streetnumber>0</tns:streetnumber>
+    <tns:city>tns:city</tns:city>
+    <tns:zip>12345</tns:zip>
+    <tns:country>US</tns:country>
+  </tns:billTo>
+  <tns:items>
+    <tns:name>tns:name</tns:name>
+    <tns:quantity>tns:quantity</tns:quantity>
+    <tns:price>0</tns:price>
+    <tns:availability>Yes</tns:availability>
+  </tns:items>
+  <tns:orderDate>2001-01-01</tns:orderDate>
+</tns:PhoneBanking>
