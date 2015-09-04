@@ -33,7 +33,7 @@ public class JUnitSpringExample {
 	}
 
 	@Test
-	public void testSampleService() {
+	public void testSampleService() throws ServiceException {
 		assertEquals(
 				"class com.areyes1.jgc.junit.spring.service.SampleServiceImpl",
 				this.sampleService.getClass().toString());
@@ -52,7 +52,7 @@ public class JUnitSpringExample {
 	}
 
 	@Test
-	public void testSampleServiceCreateNewOrder() {
+	public void testSampleServiceCreateOrder() {
 		Order newOrder = new Order();
 		newOrder.setSecurityCode("XYZ");
 		newOrder.setDescription("Description");

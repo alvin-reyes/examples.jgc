@@ -1,14 +1,14 @@
-package com.areyes1.jgc.junit.assertfalse;
+package com.areyes1.jgc.no.tests;
+
+import static org.junit.Assert.assertFalse;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import static org.junit.Assert.assertFalse;
-
 @RunWith(JUnit4.class)
-public class JUnitAssertFalseExample {
+public class JUnitTestingSampleNoTestFound {
 
 	int totalNumberOfApplicants = 0;
 	int totalNumberOfAcceptableApplicants = 10;
@@ -34,5 +34,5 @@ public class JUnitAssertFalseExample {
 				"Is total number of applicants acceptable?",
 				(this.totalNumberOfApplicants != this.totalNumberOfAcceptableApplicants));
 	}
-
+	
 }
