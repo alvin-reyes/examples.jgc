@@ -1,0 +1,43 @@
+<project name="junit-ant-example" default="unit-test-1" basedir=".">
+
+	<property name="src" location="src" />
+	<property name="build" location="build" />
+	<property name="dist" location="dist" />
+
+	<description>
+    simple example build file
+  </description>
+	<target name="unit-test-1">
+		<junit printsummary="yes" haltonfailure="yes">
+			<classpath>
+				<pathelement location="${project.class.path}" />
+				<pathelement location="${build.tests}" />
+				<pathelement path="${java.class.path}" />
+			</classpath>
+			<test name="com.areyes1.jgc.junit.assertequals.JUnitAssertEqualsExample" haltonfailure="no" outfile="result">
+				<formatter type="plain" />
+				<formatter type="xml" />
+			</test>
+		</junit>
+	</target>
+
+	<target name="unit-test-2-batch">
+		<mkdir dir="${reports.tests}" />
+		<junit printsummary="yes" haltonfailure="yes">
+			<classpath>
+				<pathelement location="${project.class.path}" />
+				<pathelement location="${build.tests}" />
+				<pathelement path="${java.class.path}" />
+			</classpath>
+
+			<formatter type="plain" />
+			<formatter type="xml" />
+
+			<batchtest fork="yes" todir="${reports.tests}">
+				<fileset dir="${src.test}">
+					<include name="**/*Test*.java" />
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+</project>
