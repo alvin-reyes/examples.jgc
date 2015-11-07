@@ -27,11 +27,12 @@ public class MessageServiceTest {
 		assertThat(messageSal, isA(String.class));
 		assertEquals("Hi!" + CONST_MSG,messageSal);
 	}
-	
+
+
 	@Ignore
 	@Test
-	public void testIgnoreMessage() {
-		assertThat(msgService.salutationMessage(), isA(String.class));
+	public void testSalutationMessageForExecutives() {
+		assertThat(msgService.salutationMessageForExecutives(), isA(String.class));
 		assertEquals(CONST_MSG, msgService.salutationMessage());
 	}
 }

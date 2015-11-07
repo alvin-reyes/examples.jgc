@@ -4,6 +4,8 @@ package com.areyes.junit.svc;
  * The Class MessageService.
  */
 public class MessageService {
+	
+	
 
 	/** The message. */
 	private String message;
@@ -35,6 +37,14 @@ public class MessageService {
 	public String salutationMessage() {
 		message = "Hi!" + message;
 		return message;
+	}
+	
+	/**
+	 * This will be the method to get the salutation messages specifically for executives.
+	 * @return
+	 */
+	public String salutationMessageForExecutives() {
+		return "this is not yet implemented";
 	}
 
 }
